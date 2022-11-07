@@ -43,7 +43,7 @@ user_input_text = st.text_area(label='', placeholder="Write your text here...",
 # you can create columns to better manage the flow of your page
 # this command makes 3 columns of equal width
 col1, col2, col3 = st.columns(3, gap='large')
-with col2:
+with col1:
     clicked = st.button("Anlyze The Text", type="primary",
                         )
 
@@ -55,8 +55,7 @@ textblob = blob.TextBlob(user_input_text)
 def table_html(type_of_sentiment: str, value: float, tag=None) -> str:
     if type_of_sentiment == "Subjectivity":
         html_tabel = f"""
-            <table style="margin-left: 150px;
-             margin-top:40px;
+            <table style="
              width:300px">
                 <thead style="text-align:center">
                     <td style="padding:20px 20px;
@@ -71,8 +70,7 @@ def table_html(type_of_sentiment: str, value: float, tag=None) -> str:
         return html_tabel
     else:
         html_tabel = f"""
-                    <table style="margin-left: 150px;
-                     margin-top:40px;
+                    <table style="
                      width:300px;">
                         <thead style="text-align:center">
                             <td style="padding:20px 20px; 
@@ -124,9 +122,4 @@ if clicked:
                          unsafe_allow_html=True)
 
         subjectivity_analyzer()
-
-
-# df = pd.DataFrame(data={})
-# st.write(df)
-
 
