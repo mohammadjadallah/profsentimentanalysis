@@ -73,12 +73,12 @@ def table_html(type_of_sentiment: str, value: float, tag=None) -> str:
                     <table style="
                      width:300px;">
                         <thead style="text-align:center">
-                            <td style="
+                            <td style="padding:20px 20px; 
                             color: rgb(188, 182, 174);
                              font-weight: bold;">{type_of_sentiment}</td>
-                            <td style=" font-weight: bold;
+                            <td style="padding:20px 20px; font-weight: bold;
                             color: rgb(173, 194, 212);">{tag}</td>
-                            <td style=" color: rgb(80, 213, 138);
+                            <td style="padding:20px 20px; color: rgb(80, 213, 138);
                              font-weight: bold;">{round(value * 100, 1)}%</td>
                         </thead>
                     </table>
